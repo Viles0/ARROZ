@@ -10,7 +10,4 @@ public class Usuario {
     private int idUsuario;
     private String nombre;
     private String apellido;
-    public int getidUsuario(){
-        return idUsuario;
-    }
 }
