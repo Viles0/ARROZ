@@ -35,10 +35,11 @@ public class UsuarioController {
     usuarios.add(usuario);
     return usuario;
     }
-    @putMapping("usuario")
+    
+    @putMapping("/usuario")
     public Usuario putusuario(@RequestBody Usuario usuario){
         for(Usuario u :usuarios){
-            if(u.getidUser()==usuario.getIdUser){
+            if(u.getidUser()==usuario.getidUser){
                 u.setNombre(usuario.getNombre());
                 u.setApellido(usuario.getApellido());
                 return u;
