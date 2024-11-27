@@ -39,7 +39,7 @@ public class UsuarioController {
     @putMapping("/usuario")
     public Usuario putusuario(@RequestBody Usuario usuario){
         for(Usuario u :usuarios){
-            if(u.getidUser()==usuario.getidUser){
+            if(u.getidUsuario()==usuario.getidUsuario){
                 u.setNombre(usuario.getNombre());
                 u.setApellido(usuario.getApellido());
                 return u;
