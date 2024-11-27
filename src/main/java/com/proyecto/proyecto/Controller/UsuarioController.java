@@ -20,11 +20,11 @@ public class UsuarioController {
 
     @GetMapping("/Users")
     public List<Usuario> getUsuarios(){
-        return Usuario;
+        return usuarios;
     }
     @GetMapping("/{nombre}")
     public Usuario getuserid(@PathVariable String nombre){
-        for (Usuario c : Usuario){
+        for (Usuario c : usuarios){
             return c;
         }
         return null;
@@ -32,11 +32,18 @@ public class UsuarioController {
 
     @PostMapping("/usuario")
     public Usuario postuser(@RequestBody Usuario usuario){
-    Usuario.add(usuario);
+    usuarios.add(usuario);
     return usuario;
     }
     @putMapping("usuario")
     public Usuario putusuario(@RequestBody Usuario usuario){
-        return usuario;
+        for(Usuario u :usuarios){
+            if(u.getidUser()==usuario.getIdUser){
+                u.setNombre(usuario.getNombre());
+                u.setApellido(usuario.getApellido());
+                return u;
+            }
+        }
+        return null;
     }
 }
