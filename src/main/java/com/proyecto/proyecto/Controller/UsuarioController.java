@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 
 import com.proyecto.proyecto.Model.Usuario;
 
+@RestController
 public class UsuarioController {
 
     private List<Usuario> Usuario = new ArrayList<>(
@@ -33,5 +34,9 @@ public class UsuarioController {
     public Usuario postuser(@RequestBody Usuario usuario){
     Usuario.add(usuario);
     return usuario;
+    }
+    @putMapping("usuario")
+    public Usuario putusuario(@RequestBody Usuario usuario){
+        return usuario;
     }
 }
