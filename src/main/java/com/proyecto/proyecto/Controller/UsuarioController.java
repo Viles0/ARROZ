@@ -47,4 +47,15 @@ public class UsuarioController {
         }
         return null;
     }
+
+    @DeleteMapping("/{idUsuario}")
+    public Usuario deleteUser(@PathVariable int idUsuario){
+        for(Usuario u: usuarios){
+            if(u.getidUsuario() == idUsuario){
+                usuarios.remove(idUsuario);
+                return u;
+            }
+        }
+        return null;
+    }
 }
