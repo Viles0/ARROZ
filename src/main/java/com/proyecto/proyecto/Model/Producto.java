@@ -5,9 +5,10 @@ import lombok.Data;
 
 @AllArgsConstructor
 @Data
-public class Usuario {
+public class Producto {
 
-    private int idUsuario;
+    private int idProducto;
     private String nombre;
-    private String apellido;
+    private int Valor;
+    private int Cantidad;
 }
