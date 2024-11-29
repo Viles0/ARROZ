@@ -18,6 +18,7 @@ import com.proyecto.proyecto.Model.Producto;
 
 @RestController
 @RequestMapping("/Producto")
+    --localhost:8080/Producto/producto 
 public class ProductoController {
 
     private List<Producto> productos = new ArrayList<>(
